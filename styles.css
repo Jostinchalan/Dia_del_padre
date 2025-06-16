@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
     min-height: 100vh;
-    color: #1e293b;
+    color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -96,7 +96,7 @@ body {
 
 .check-icon {
     background: #10b981;
-    color: white;
+    color: #ffffff;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -117,7 +117,7 @@ body {
 
 .continue-btn {
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 16px 32px;
     font-size: 1rem;
@@ -141,6 +141,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+    min-height: 100vh;
 }
 
 .page-header {
@@ -151,19 +153,15 @@ body {
 
 .page-header h1 {
     font-size: clamp(2rem, 5vw, 3rem);
-    color: white;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 10px;
     animation: fadeInDown 1s ease-out;
-    background: white;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .subtitle {
     font-size: 1.2rem;
-    color: lightgray;
+    color: #cbd5e1;
     font-weight: 400;
 }
 
@@ -214,27 +212,27 @@ body {
     margin: 0;
 }
 
-/* Sección de cámara */
+/* Sección de cámara - CORREGIDO */
 .camera-section {
-    background: white;
+    background: linear-gradient(135deg, #475569 0%, #334155 100%);
     border-radius: 20px;
     padding: 40px;
     margin: 40px 0;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid #64748b;
     animation: fadeIn 1s ease-out 1.2s both;
 }
 
 .camera-section h2 {
-    color: white;
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 8px;
 }
 
 .section-subtitle {
-    color: white;
+    color: #cbd5e1;
     font-size: 1rem;
     margin-bottom: 30px;
 }
@@ -250,7 +248,7 @@ body {
     max-width: 400px;
     border-radius: 16px;
     border: 3px solid #e2e8f0;
-    background: #000;
+    background: #000000;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -307,19 +305,19 @@ body {
 
 .camera-btn.primary, .audio-btn, .action-btn.primary {
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    color: white;
+    color: #ffffff;
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .camera-btn.secondary, .audio-btn.secondary, .action-btn.secondary {
     background: linear-gradient(135deg, #64748b, #475569);
-    color: white;
+    color: #ffffff;
     box-shadow: 0 4px 15px rgba(100, 116, 139, 0.3);
 }
 
 .camera-btn.success {
     background: linear-gradient(135deg, #10b981, #059669);
-    color: white;
+    color: #ffffff;
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
@@ -346,7 +344,7 @@ body {
 .recognition-section h2 {
     text-align: center;
     font-size: 2.2rem;
-    color: white;
+    color: #ffffff;
     font-weight: 600;
     margin-bottom: 40px;
 }
@@ -359,7 +357,7 @@ body {
 }
 
 .recognition-card {
-    background: white;
+    background: #ffffff;
     border-radius: 16px;
     padding: 30px;
     text-align: center;
@@ -380,13 +378,13 @@ body {
 
 .recognition-card h3 {
     font-size: 1.3rem;
-    color:white;
+    color: #1e293b;
     font-weight: 600;
     margin-bottom: 12px;
 }
 
 .recognition-card p {
-    color: lightblue;
+    color: #64748b;
     line-height: 1.6;
 }
 
@@ -484,10 +482,27 @@ body {
     margin-top: 20px;
 }
 
+/* Footer */
+.page-footer {
+    text-align: center;
+    margin: 50px 0;
+    padding: 30px;
+}
+
+.footer-text {
+    color: #cbd5e1;
+    margin-top: 20px;
+}
+
+.footer-text p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
 /* Botón de diploma */
 .diploma-btn {
     background: linear-gradient(135deg, #dc2626, #b91c1c);
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 20px 40px;
     font-size: 1.2rem;
@@ -525,7 +540,7 @@ body {
 }
 
 .diploma-content {
-    background: white;
+    background: #ffffff;
     border-radius: 20px;
     padding: 30px;
     max-width: 900px;
@@ -542,7 +557,7 @@ body {
     right: 20px;
     top: 20px;
     background: #ef4444;
-    color: white;
+    color: #ffffff;
     border: none;
     width: 40px;
     height: 40px;
@@ -572,7 +587,7 @@ body {
     border: 6px solid #f59e0b;
     border-radius: 16px;
     padding: 40px;
-    background: white;
+    background: #ffffff;
     position: relative;
     box-shadow: inset 0 0 0 2px #fbbf24;
 }
@@ -689,7 +704,7 @@ body {
 
 .download-btn, .print-btn {
     background: linear-gradient(135deg, #10b981, #059669);
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 12px 25px;
     font-size: 1.1rem;
