@@ -964,4 +964,111 @@ body {
         font-size: 1.1rem;
     }
 }
+.video-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.video-screen-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 600px; /* Reducido de 800px */
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.video-screen-container h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.video-screen-container p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.video-player-container {
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 100%;
+}
+
+.video-player-container video {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Limitar altura máxima */
+}
+
+.video-progress {
+    margin-top: 15px;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+    .video-screen {
+        padding: 10px;
+    }
+
+    .video-screen-container {
+        padding: 15px;
+        max-width: 95%;
+        border-radius: 10px;
+    }
+
+    .video-screen-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .video-screen-container p {
+        font-size: 0.85rem;
+    }
+
+    .video-player-container video {
+        max-height: 200px; /* Más pequeño en móvil */
+    }
+
+    .continue-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .video-progress {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-screen-container {
+        padding: 12px;
+    }
+
+    .video-screen-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .video-player-container video {
+        max-height: 180px; /* Aún más pequeño en pantallas muy pequeñas */
+    }
+}
 }

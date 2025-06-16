@@ -63,8 +63,49 @@ function playAlertSound() {
 function enterSite() {
     playAlertSound();
     document.getElementById('warningScreen').style.display = 'none';
-    document.getElementById('mainContent').style.display = 'block';
-    initializeApp();
+    document.getElementById('videoScreen').style.display = 'flex'; // Mostrar video en lugar del contenido principal
+    setupMandatoryVideo();
+}
+
+// Agregar estas nuevas funciones
+function setupMandatoryVideo() {
+    const video = document.getElementById('mandatory-video');
+    const continueBtn = document.getElementById('continue-after-video');
+    const videoStatus = document.getElementById('video-status');
+
+    let videoWatched = false;
+
+    // Detectar cuando el video termine
+    video.addEventListener('ended', function() {
+        videoWatched = true;
+        continueBtn.style.display = 'inline-block';
+        continueBtn.disabled = false;
+        videoStatus.textContent = '¡Video completado! Ya puedes ingresar como un padre ejemplar.';
+        videoStatus.style.color = '#27ae60';
+    });
+
+    // Prevenir que salten partes del video
+    video.addEventListener('timeupdate', function() {
+        const progress = Math.round((video.currentTime / video.duration) * 100);
+    });
+
+    // Botón para continuar después del video
+    continueBtn.addEventListener('click', function() {
+        if (videoWatched) {
+            document.getElementById('videoScreen').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+            initializeApp();
+        }
+    });
+
+    // Prevenir que cierren o salten el video
+    video.addEventListener('seeking', function() {
+        if (!videoWatched && video.currentTime > video.duration - 5) {
+            video.currentTime = video.currentTime - 10;
+            videoStatus.textContent = 'No puedes saltar el video. Debes verlo completo.';
+            videoStatus.style.color = '#e74c3c';
+        }
+    });
 }
 
 // Función para inicializar la aplicación
