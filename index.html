@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+     <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día del Padre 2025</title>
+    <link rel="stylesheet" href="styles.css?v=2.3">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div id="warningScreen" class="warning-screen">
+        <div class="warning-container">
+            <div class="warning-icon">⚠️</div>
+            <h1>Verificación Paternal</h1>
+
+            <div class="video-section">
+                <video width="300" height="180" controls>
+                    <source src="dia_del_padre.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+
+            <div class="requirements-list">
+                <p class="intro-text">Esta página está diseñada exclusivamente para padres responsables que cumplen con:</p>
+                <div class="requirement-item">
+                    <span class="check-icon">✓</span>
+                    <span>Manutención al día</span>
+                </div>
+                <div class="requirement-item">
+                    <span class="check-icon">✓</span>
+                    <span>Sin demandas pendientes</span>
+                </div>
+                <div class="requirement-item">
+                    <span class="check-icon">✓</span>
+                    <span>Presente en fechas importantes</span>
+                </div>
+            </div>
+
+            <p class="disclaimer">Si no cumples con estos requisitos, te recomendamos reflexionar antes de continuar.</p>
+            <button class="continue-btn" onclick="enterSite()">Continuar como padre responsable</button>
+        </div>
+    </div>
+
+     <!-- Sección del video obligatorio -->
+<div id="videoScreen" class="video-screen" style="display: none;">
+    <div class="video-screen-container">
+        <h2>Si tu hijo no te dio un regalo ya sabes las razones</h2>
+
+        <div class="video-player-container">
+            <video id="mandatory-video" width="100%" height="auto" controls>
+                <source src="cuota_fiesta.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+
+        <button id="continue-after-video" class="continue-btn" style="display: none;" disabled>
+            Continuar al sitio
+        </button>
+
+        <div class="video-progress">
+            <p id="video-status">Reproduce el video para continuar...</p>
+        </div>
+    </div>
+</div>
+
+    <div id="mainContent" class="main-content">
+        <header class="page-header">
+            <h1>Celebración del Día del Padre 2025</h1>
+            <p class="subtitle">Un reconocimiento especial para padres ejemplares</p>
+        </header>
+
+        <section class="video-container">
+            <iframe src="https://www.youtube.com/embed/yZf6vEP1Xo4"
+                    title="Video del Día del Padre"
+                    frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
+        </section>
+
+        <div class="music-message">
+            <div class="icon">🎵</div>
+            <p>Haz clic en el video para reproducir la música de fondo</p>
+        </div>
+
+        <section class="camera-section">
+            <h2>Retrato del Padre del Año</h2>
+            <p class="section-subtitle">Captura tu mejor momento paternal</p>
+
+            <div class="camera-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+                <div id="photo-preview">
+                    <img id="captured-photo" alt="Foto capturada">
+                    <div class="photo-actions">
+                        <button id="retake-btn" class="camera-btn secondary">
+                            <span class="btn-icon">🔄</span>
+                            Nueva foto
+                        </button>
+                        <button id="save-photo-btn" class="camera-btn primary">
+                            <span class="btn-icon">✓</span>
+                            Guardar foto
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="camera-controls">
+                <button id="start-camera-btn" class="camera-btn primary">
+                    <span class="btn-icon">📷</span>
+                    Activar cámara
+                </button>
+                <button id="take-photo-btn" class="camera-btn primary" style="display: none;">
+                    <span class="btn-icon">📸</span>
+                    Tomar foto
+                </button>
+            </div>
+        </section>
+
+        <section class="recognition-section">
+            <h2>Reconocimientos para Padres Ejemplares</h2>
+
+            <div class="recognition-grid">
+                <div class="recognition-card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Padre Responsable</h3>
+                    <p>Felicidades por mantener tus compromisos familiares al día sin necesidad de recordatorios legales.</p>
+                </div>
+
+                <div class="recognition-card">
+                    <div class="card-icon">💼</div>
+                    <h3>Proveedor Confiable</h3>
+                    <p>Tu dedicación al trabajo y el sustento familiar es ejemplar y digna de admiración.</p>
+                </div>
+
+                <div class="recognition-card">
+                    <div class="card-icon">👑</div>
+                    <h3>Líder del Hogar</h3>
+                    <p>Compartes el liderazgo familiar de manera equilibrada con tu pareja y das el ejemplo a seguir.</p>
+                </div>
+
+                <div class="recognition-card">
+                    <div class="card-icon">💸</div>
+                    <h3>Experto en Finanzas Familiares</h3>
+                    <p>Conoces exactamente el valor de la crianza porque inviertes conscientemente en tus hijos.</p>
+                </div>
+
+                <div class="recognition-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Modelo Paternal</h3>
+                    <p>Tu familia reconoce tus esfuerzos diarios, incluso cuando no todo sale perfecto.</p>
+                </div>
+
+                <div class="recognition-card">
+                    <div class="card-icon">💝</div>
+                    <h3>Padre Presente</h3>
+                    <p>Tu amor incondicional y presencia constante son el regalo más valioso para tu familia.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="transition-section">
+            <div class="transition-content">
+                <p>Ahora, pasemos a algo más personal y emotivo...</p>
+            </div>
+        </div>
+
+        <section class="emotional-section">
+            <h2>Mensaje Especial de tu Hijo</h2>
+            <p class="emotional-subtitle">Una carta llena de amor y gratitud</p>
+
+            <div class="audio-controls">
+                <button id="playAudio" class="audio-btn">
+                    <span class="btn-icon">🔊</span>
+                    Escuchar con voz infantil
+                </button>
+                <button id="stopAudio" class="audio-btn secondary" style="display: none;">
+                    <span class="btn-icon">⏹️</span>
+                    Detener reproducción
+                </button>
+            </div>
+
+            <div class="letter-content">
+                <div class="letter-header">
+                    <p><strong>Querido Papá,</strong></p>
+                </div>
+
+                <div class="letter-body">
+                    <p>Cuando era muy pequeñito, tú eras mi superhéroe gigante. Me cargabas en tus hombros y yo me sentía como si pudiera tocar las nubes. Tus manos enormes me hacían sentir seguro, y tu risa era la música más bonita del mundo.</p>
+
+                    <p>Cuando empecé a caminar, tú estabas ahí con los brazos abiertos esperándome. Cada vez que me caía, tú me levantabas y me decías "vamos, campeón, una vez más". Nunca te cansaste de enseñarme.</p>
+
+                    <p>En mis primeros días de escuela, cuando tenía miedo, tú me tomabas de la mano y me decías que todo iba a estar bien. Y siempre tenías razón. Cuando llegaba a casa, tú querías saber todo sobre mi día, como si mis pequeñas aventuras fueran las más importantes del mundo.</p>
+
+                    <p>Ahora que voy creciendo, entiendo que trabajas muy duro para darnos todo lo que necesitamos. A veces llegas cansado, pero siempre tienes tiempo para un abrazo, para ayudarme con la tarea, o para jugar conmigo aunque sea un ratito.</p>
+
+                    <p>Papá, quiero que sepas que eres mi héroe de verdad. No por ser perfecto, sino porque me amas sin condiciones. Porque me enseñas a ser buena persona, porque me proteges, porque me haces reír, y porque sé que siempre puedo contar contigo.</p>
+
+                    <p>Cuando sea grande, quiero ser como tú: valiente, trabajador, amoroso y divertido. Quiero que mis hijos me vean como yo te veo a ti.</p>
+
+                    <p class="letter-closing"><strong>Gracias por ser el mejor papá del mundo. Te amo muchísimo.</strong></p>
+
+                    <p class="letter-signature">Tu hijo que te adora 💙</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <button id="diploma-btn" class="diploma-btn" style="display: none;">
+                <span class="btn-icon">🏆</span>
+                Generar Diploma de Reconocimiento
+            </button>
+            <div class="footer-text">
+                <p>Certificación de Paternidad Responsable</p>
+                <p>Válido por superar la verificación inicial</p>
+            </div>
+        </footer>
+
+        <!-- Modal del Diploma -->
+        <div id="diploma-modal" class="diploma-modal" style="display: none;">
+            <div class="diploma-content">
+                <button class="close-diploma">&times;</button>
+                <div class="diploma-certificate">
+                    <div class="diploma-border">
+                        <div class="diploma-header">
+                            <h1>DIPLOMA DE RECONOCIMIENTO</h1>
+                            <h2>PADRE EJEMPLAR DEL AÑO</h2>
+                            <div class="diploma-logo">🏆</div>
+                        </div>
+                        <div class="diploma-body">
+                            <div class="diploma-photo-container">
+                                <img id="diploma-photo" src="" alt="Foto del Padre Ejemplar">
+                            </div>
+                            <div class="diploma-text">
+                                <input type="text" id="papa-name" placeholder="Nombre completo" class="name-input">
+                                <p class="diploma-description">
+                                    Por demostrar compromiso excepcional con sus responsabilidades paternas,
+                                    mantener sus obligaciones familiares al día y ser un ejemplo positivo
+                                    en la vida de sus hijos.
+                                </p>
+                                <p class="diploma-thanks">
+                                    En reconocimiento a su dedicación, amor y guía constante.
+                                </p>
+                                <div class="diploma-date">
+                                    <p>Otorgado el: <span id="current-date"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="diploma-signature">
+                            <p>Con amor y admiración</p>
+                            <p>Tu familia ❤️</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="diploma-actions">
+                    <button id="download-diploma-btn" class="action-btn primary">
+                        <span class="btn-icon">💾</span>
+                        Descargar diploma
+                    </button>
+                    <button id="print-diploma-btn" class="action-btn secondary">
+                        <span class="btn-icon">🖨️</span>
+                        Imprimir diploma
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
